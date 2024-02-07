@@ -1,0 +1,14 @@
+.graphic {
+    height: 40rem;
+    width: 40rem;
+}
+
+.landingTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 5rem;
+}
+
+.description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+}
