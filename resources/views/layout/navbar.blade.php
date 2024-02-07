@@ -18,25 +18,21 @@
     <div class="hidden lg:block">
       <ul class="flex flex-col gap-2 my-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
         <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
-          <a href="#" class="flex items-center transition-colors hover:text-blue-500">
-            Pages
+          <a href="/" class="flex items-center transition-colors hover:text-blue-500">
+            Home
+          </a>
+        </li>
+        <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
+          <a href="/task" class="flex items-center transition-colors hover:text-blue-500">
+            Task
           </a>
         </li>
         <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
           <a href="#" class="flex items-center transition-colors hover:text-blue-500">
-            Account
+            About
           </a>
         </li>
-        <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
-          <a href="#" class="flex items-center transition-colors hover:text-blue-500">
-            Blocks
-          </a>
-        </li>
-        <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
-          <a href="#" class="flex items-center transition-colors hover:text-blue-500">
-            Docs
-          </a>
-        </li>
+
       </ul>
     </div>
     <button
