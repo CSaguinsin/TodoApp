@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Idea; // Import the Idea model
 class HomeController extends Controller
 {
     public function index()
     {
+
+
 // for first section of the landing page
         $landingTitle = [
             [

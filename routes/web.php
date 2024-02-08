@@ -2,26 +2,16 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\NoteController;
+use App\Http\Controllers\IdeaController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
 
 Route::get('/',
     [ HomeController::class , 'index' ]
 );
 
-Route:: get ('/task',
-    [ TaskController::class, 'index'
-]);
 
 
 
@@ -34,11 +24,22 @@ Route::get('/profile', function () {
     return view('layout.mainComponents.profile');
 });
 
-
-Route::get('/notes', function () {
-    return view('layout.mainComponents.notes');
-});
+Route::get('/notes',
+    [NoteController::class , 'index' ]
+);
 
 Route::get('/todomain', function () {
     return view('layout.mainComponents.todomain');
 });
+
+// end
+
+// CRUD Logic's
+Route::post('/ideas',
+    [IdeaController::class , 'store' ]
+) ->name('idea.create');
+
+Route::delete('/ideas/{id}',
+    [IdeaController::class , 'destroy' ]
+) ->name('idea.destroy');
+// end

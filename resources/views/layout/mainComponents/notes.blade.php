@@ -12,19 +12,20 @@
     @include('layout.sidebar')
 
     <div class="w-full max-w-md">
-        <div class="border-blue-gray-200 border-t-transparent bg-transparent max-w-lg mx-auto border px-6 py-4 rounded-lg">
-            <p class="text-lg leading-relaxed mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lorem
-                nulla. Donec consequat urna a tortor sagittis lobortis.</p>
-            <div class="flex justify-between items-center">
 
-                <div class="flex items-center">
-                    <a href="#" class="text-gray-500 hover:text-gray-700 mr-4"><i class="far fa-flag"></i>Delete</a>
-                </div>
-            </div>
-        </div>
+        @foreach ($ideas as $idea )
+        @include('layout.shared.idea-card')
+        @endforeach
+<form action="{{ route('idea.create') }}" method="post">
+    @csrf
+
     <div class="pt-10">
+        <div class="mb-5 relative z-0 w-full  group">
+            <input type="text" name="title" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Title</label>
+        </div>
         <div class="relative">
-            <textarea
+            <textarea name="idea"
                 class="pt-10 peer h-full min-h-[100px] w-full resize-none rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-blue-gray-50"
                 placeholder=" "></textarea>
                 <label
@@ -33,12 +34,13 @@
               </label>
                 <button
                 class="select-none rounded-lg border border-gray-900 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                type="button"
+                type="submit"
                         >
                     Send
                 </button>
         </div>
     </div>
+</form>
     </div>
 </body>
 </html>
