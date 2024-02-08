@@ -1,6 +1,6 @@
 .graphic {
     height: 40rem;
-    width: 40rem;
+    width: 60rem;
 }
 
 .landingTitle {
@@ -10,5 +10,11 @@
 
 .description {
     font-family: 'Outfit', sans-serif;
-    font-size: 1rem;
+    font-size: 2rem;
+}
+
+.seconddescription {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+
 }

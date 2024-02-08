@@ -16,6 +16,13 @@
                 @yield('content')
             </div>
 
+            <div>
+                @yield('secondSection')
+            </div>
+
+            <div>
+                @yield('thirdSection')
+            </div>
 
             <footer>
                 @include('layout.footer')
