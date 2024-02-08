@@ -8,27 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-    <footer class="w-full p-8  bg-white">
+    <footer class="block w-full max-w-screen-xl px-6 py-3 mx-auto text-white backdrop-saturate-200">
         <div
           class="flex flex-row flex-wrap items-center justify-center text-center bg-white gap-y-6 gap-x-12 md:justify-between">
           <img src="../assets/DosmartLogo.png" alt="logo-ct" class="w-30 h-20" />
           <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
             <li>
               <a href="#"
-                class="block font-sans text-base antialiased font-normal leading-relaxed transition-colors text-blue-gray-900 hover:text-blue-500 focus:text-blue-500">
+                class="seconddescription block  text-base antialiased font-normal leading-relaxed transition-colors text-blue-gray-900 hover:text-blue-500 focus:text-blue-500">
                     Home
               </a>
             </li>
             <li>
-              <a href="#"
-                class="block font-sans text-base antialiased font-normal leading-relaxed transition-colors text-blue-gray-900 hover:text-blue-500 focus:text-blue-500">
-                Task
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="block font-sans text-base antialiased font-normal leading-relaxed transition-colors text-blue-gray-900 hover:text-blue-500 focus:text-blue-500">
-                About
+              <a href="https://github.com/CSaguinsin/TodoApp" target="_blank"
+                class="seconddescription block  text-base antialiased font-normal leading-relaxed transition-colors text-blue-gray-900 hover:text-blue-500 focus:text-blue-500">
+                Docs
               </a>
             </li>
           </ul>
