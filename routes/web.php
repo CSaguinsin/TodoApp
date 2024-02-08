@@ -24,3 +24,21 @@ Route:: get ('/task',
 ]);
 
 
+
+Route::get('/todo', function () {
+    return view('todo');
+});
+
+// main ui's of the application
+Route::get('/profile', function () {
+    return view('layout.mainComponents.profile');
+});
+
+
+Route::get('/notes', function () {
+    return view('layout.mainComponents.notes');
+});
+
+Route::get('/todomain', function () {
+    return view('layout.mainComponents.todomain');
+});

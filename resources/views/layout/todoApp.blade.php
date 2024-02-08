@@ -8,24 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        @include('layout.navbar')
-    </nav>
-
-    <div>
-        @yield('content')
-    </div>
-
-    <div>
-        @yield('secondSection')
-    </div>
-
-    <div>
-        @yield('thirdSection')
-    </div>
-
-    <footer>
-        @include('layout.footer')
-    </footer>
+    @yield('sidebar')
 </body>
 </html>

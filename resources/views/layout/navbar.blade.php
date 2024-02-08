@@ -20,14 +20,14 @@
             Home
           </a>
         </li>
-        <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
+        {{-- <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
           <a href="/task" class="flex items-center transition-colors hover:text-blue-500">
             Task
-          </a>
+          </a> --}}
         </li>
         <li class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
-          <a href="#" class="flex items-center transition-colors hover:text-blue-500">
-            About
+          <a href="https://github.com/CSaguinsin/TodoApp" target="_blank" class="flex items-center transition-colors hover:text-blue-500">
+            Docs
           </a>
         </li>
 
