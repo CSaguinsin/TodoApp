@@ -1,5 +1,6 @@
 Do Smart✏️- Unlock Your Productivity with Do Smart: Your Ultimate To-Do Companion!
-![image](https://github.com/CSaguinsin/TodoApp/assets/123741242/9f0017fb-5f6b-4be3-8046-368bf837c71d)
+![image](https://github.com/CSaguinsin/TodoApp/assets/123741242/10611bb2-5498-4da0-9f28-c1a642dde80c)
+
 
 
 # Tech Stack and Tools💻
