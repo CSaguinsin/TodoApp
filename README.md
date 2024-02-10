@@ -21,6 +21,7 @@ After that run the following commands in the root of the repository:
 ```
 npm install
 npm run dev
+php artisan migrate
 php artisan serve
 ```
 # 🔥Features
