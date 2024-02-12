@@ -12,6 +12,7 @@ class TodoIdea extends Model
     protected $table = 'todo_tables';
     protected $fillable = [
         'content',
-        'title'
+        'title',
+        'image'
     ];
 }
