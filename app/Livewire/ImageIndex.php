@@ -2,29 +2,42 @@
 
 namespace App\Livewire;
 
+use App\Models\Image;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+
 class ImageIndex extends Component
 {
     use WithFileUploads;
 
-    #[Rule('image|max:1024')]
     public $photo;
 
     public function save()
     {
-        $this->validate();
-        $name = $this->photo-> getClientOriginalName();
+        $this->validate([
+            'photo' => 'image|max:1024', // Adjust validation rules as needed
+        ]);
+
+        $name = $this->photo->getClientOriginalName();
         $path = $this->photo->storeAs('images', $name, 'public');
+
         Image::create([
             'image' => $name,
             'path' => $path
         ]);
 
-        $this->reset();
+        $this->reset('photo');
+
+        // Emit event to refresh images after uploading
+        $this->emit('refreshImages');
     }
+
     public function render()
     {
-        return view('livewire.image-index')->layout('layouts.app');
+        $images = Image::all(); // Retrieve images
+        return view('livewire.image-index', compact('images'))->layout('layouts.app');
     }
 }
+
+
+

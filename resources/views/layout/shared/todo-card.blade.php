@@ -13,6 +13,7 @@
     <p class="text-gray-500 dark:text-gray-400">
         {{ $todoIdea->content }}
     </p>
+
     <div class="flex items-center mt-4 space-x-4">
         <form method="POST" action="{{ route('todos.destroy', $todoIdea->id) }}">
             @csrf

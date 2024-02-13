@@ -61,3 +61,5 @@ Route::delete('/todo/{id}',
 // image upload route
 Route::get('/images', ImageIndex::class)->name('images.index');
 // end
+
+
