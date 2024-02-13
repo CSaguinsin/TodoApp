@@ -26,6 +26,7 @@
             @endforeach
             @include('layout.shared.todo-form')
         </div>
+        @livewire('image-index')
     </section>
 
 

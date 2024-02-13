@@ -26,5 +26,5 @@
         </div>
     </div>
 </form>
-@livewire('image-index')
+
 

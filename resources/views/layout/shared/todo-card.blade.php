@@ -14,6 +14,14 @@
         {{ $todoIdea->content }}
     </p>
 
+    {{-- Display images from livewire-tmp directory --}}
+    <div class="flex items-center mt-4 space-x-4">
+        @foreach(Storage::files('livewire-tmp') as $file)
+            <img class="h-30 w-30 rounded-lg" src="{{ Storage::url('livewire-tmp/' . basename($file)) }}" alt="{{ basename($file) }}">
+        @endforeach
+    </div>
+
+
     <div class="flex items-center mt-4 space-x-4">
         <form method="POST" action="{{ route('todos.destroy', $todoIdea->id) }}">
             @csrf
@@ -27,5 +35,3 @@
         </form>
     </div>
 </article>
-
-
