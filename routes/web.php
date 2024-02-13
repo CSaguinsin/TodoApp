@@ -6,6 +6,7 @@ use App\Http\Controllers\NoteController;
 use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\TodoIdeaController;
+use App\Livewire\ImageIndex;
 use Illuminate\Support\Facades\Route;
 
 
@@ -57,4 +58,6 @@ Route::delete('/todo/{id}',
 ) ->name('todos.destroy');
 // end
 
-
+// image upload route
+Route::get('/images', ImageIndex::class)->name('images.index');
+// end

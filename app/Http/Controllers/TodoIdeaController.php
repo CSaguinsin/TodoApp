@@ -13,6 +13,7 @@ class TodoIdeaController extends Controller
             'title' => request()->get('title', null)
         ]);
             return redirect('/todo');
+
     }
 
     public function destroy($id){
