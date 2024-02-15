@@ -33,10 +33,20 @@ class TodoIdeaController extends Controller
 
 
     public function destroy($id){
-        $todos = TodoIdea::where('id', $id)->firstOrFail();
+        $todo = TodoIdea::findOrFail($id);
 
-        $todos->delete();
+        // Get the image path
+        $imagePath = public_path($todo->image);
+
+        // Check if the image exists and delete it
+        if (file_exists($imagePath)) {
+            unlink($imagePath); // Delete the image file
+        }
+
+        // Delete the idea
+        $todo->delete();
 
         return redirect('/todo');
     }
+
 }

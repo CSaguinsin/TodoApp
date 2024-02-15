@@ -13,7 +13,7 @@
     <p class="text-gray-500 dark:text-gray-400">
         {{ $todoIdea->content }}
     </p>
-    <img src="{{ asset($todoIdea->image) }}" alt="image" class="w-100 h-100 rounded-md" />
+    <img src="{{ asset($todoIdea->image) }}" alt="image" class="w-100  rounded-md" />
 
 {{-- Display images from public directory --}}
 {{-- <div class="flex items-center mt-4 space-x-4">
