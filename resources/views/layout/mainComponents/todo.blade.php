@@ -25,8 +25,9 @@
                 @include('layout.shared.todo-card')
             @endforeach
             @include('layout.shared.todo-form')
+           {{-- @livewire('image.index') --}}
         </div>
-        @livewire('image-index')
+
     </section>
 
 

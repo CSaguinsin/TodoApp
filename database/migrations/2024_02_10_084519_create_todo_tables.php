@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('content');
             $table->string('title');
+            $table->string('image')->nullable(); // Add this line to create the image column
             $table->timestamps();
         });
     }
@@ -27,3 +28,4 @@ return new class extends Migration
         Schema::dropIfExists('todo_tables');
     }
 };
+

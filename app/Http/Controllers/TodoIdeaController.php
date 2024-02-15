@@ -6,18 +6,35 @@ use Illuminate\Http\Request;
 
 class TodoIdeaController extends Controller
 {
-    public function store(){
-
-        $todos = TodoIdea::create([
-            'content' => request()->get('idea', null),
-            'title' => request()->get('title', null)
+    public function store(Request $request)
+    {
+        $request->validate([
+            'idea' => 'required',
+            'title' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
-            return redirect('/todo');
 
+        $todos = new TodoIdea();
+        $todos->content = $request->input('idea');
+        $todos->title = $request->input('title');
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $path = 'uploads/ideas/';
+            $image->move(public_path($path), $filename);
+            $todos->image = $path . $filename;
+        }
+
+        $todos->save();
+
+        return redirect('/todo');
     }
+
 
     public function destroy($id){
         $todos = TodoIdea::where('id', $id)->firstOrFail();
+
         $todos->delete();
 
         return redirect('/todo');

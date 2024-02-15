@@ -9,5 +9,10 @@ class Image extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['image', 'path'];
+    protected $fillable = ['path']; // Specify the fillable attributes
+
+    public function getPathAttribute($value)
+    {
+        return asset('storage/' . $value); // Prepend the 'storage' path to the image path
+    }
 }

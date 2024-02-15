@@ -14,7 +14,9 @@ class AddImageToTodoTables extends Migration
     public function up()
     {
         Schema::table('todo_tables', function (Blueprint $table) {
-            $table->string('image')->nullable(); // Add a nullable string column for storing image filenames
+            $table->after('title', function ($table) {
+                $table->string('image')->nullable();
+            });
         });
     }
 
@@ -30,4 +32,3 @@ class AddImageToTodoTables extends Migration
         });
     }
 }
-
