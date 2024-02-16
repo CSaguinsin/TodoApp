@@ -21,9 +21,6 @@ Route::get('/',
 
 
 // main ui's of the application
-Route::get('/profile', function () {
-    return view('layout.mainComponents.profile');
-});
 
 Route::get('/notes',
     [NoteController::class , 'index' ]

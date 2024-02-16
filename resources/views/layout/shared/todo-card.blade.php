@@ -1,4 +1,4 @@
-<article class="seconddescription pt-6 mt-10 text-base bg-white rounded-lg dark:bg-gray-900">
+<article  w-50 pt-6 mt-10 text-base bg-white rounded-lg dark:bg-gray-900">
     <footer class="flex justify-between items-center mb-2">
         <div class="flex items-center">
             <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 mr-2">
@@ -10,10 +10,10 @@
             <p class="text-sm text-gray-600 dark:text-gray-400">{{ $todoIdea->created_at }}</p>
         </div>
     </footer>
-    <p class="text-gray-500 dark:text-gray-400">
-        {{ $todoIdea->content }}
+    <p >
+         {!!  $todoIdea->content   !!}
     </p>
-    <img src="{{ asset($todoIdea->image) }}" alt="image" class="w-100  rounded-md" />
+    <img src="{{ asset($todoIdea->image) }}" alt="image" class="w-100"/>
 
 {{-- Display images from public directory --}}
 {{-- <div class="flex items-center mt-4 space-x-4">
@@ -38,3 +38,5 @@
         </form>
     </div>
 </article>
+
+
