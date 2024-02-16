@@ -10,7 +10,7 @@
             <p class="text-sm text-gray-600 dark:text-gray-400">{{ $todoIdea->created_at }}</p>
         </div>
     </footer>
-    <p >
+    <p>
          {!!  $todoIdea->content   !!}
     </p>
     <img src="{{ asset($todoIdea->image) }}" alt="image" class="w-100"/>
