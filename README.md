@@ -19,10 +19,10 @@ git clone https://github.com/CSaguinsin/TodoApp.git
 ```
 After that run the following commands in the root of the repository:
 ```
-npm install
-npm run dev
-php artisan migrate
-php artisan serve
+npm install {{ This is the first command }}
+php artisan migrate {{ This is the second command to migrate the DB of the project to your computer }}
+npm run dev  {{ This is the third command to run the TailwindCSS file }}
+php artisan serve {{ This is the fourth command to run the Project }}
 ```
 # 🔥Features
 *  CRUD (create, read, update, delete)
