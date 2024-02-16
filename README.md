@@ -26,6 +26,8 @@ php artisan serve {{ This is the fourth command to run the Project }}
 ```
 # 🔥Features
 *  CRUD (create, read, update, delete)
+*  Upload Images
+*  RTE Functionality (rich text editor)
 
 ## License
 
